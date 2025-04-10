@@ -1,8 +1,5 @@
+import mongoose from 'mongoose';
 
-
-const mongoose = require("mongoose");
-
-// Updated Auction Schema
 const auctionSchema = new mongoose.Schema({
   productId: String,
   startTime: Date,
@@ -24,6 +21,4 @@ const auctionSchema = new mongoose.Schema({
 });
 
 const Auction = mongoose.model("Auction", auctionSchema);
-
-module.exports = Auction;
-
+export default Auction;

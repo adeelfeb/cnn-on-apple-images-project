@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
 const bidSchema = new mongoose.Schema({
   auctionId: { type: mongoose.Schema.Types.ObjectId, ref: "Auction", required: true },
@@ -8,4 +8,4 @@ const bidSchema = new mongoose.Schema({
 });
 
 const Bid = mongoose.model("Bid", bidSchema);
-module.exports = Bid;
+export default Bid;

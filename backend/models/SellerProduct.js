@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const SellerProductSchema = new mongoose.Schema({
   sellerName: { type: String, required: true },
@@ -7,9 +7,8 @@ const SellerProductSchema = new mongoose.Schema({
   price: { type: Number, required: true },
   description: { type: String, required: true },
   productImage: { type: String },
-  quantity: { type: Number, required: true },  // Added the quantity field
+  quantity: { type: Number, required: true },
 });
 
 const SellerProduct = mongoose.model('SellerProduct', SellerProductSchema);
-
-module.exports = SellerProduct;
+export default SellerProduct;
